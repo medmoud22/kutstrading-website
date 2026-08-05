@@ -155,7 +155,7 @@
       'Message:\n' + message;
 
     var mailLink =
-      'mailto:managingdirector@kutstrading.com' +
+      'mailto:info@kutstrading.com' +
       '?subject=' + encodeURIComponent('Website Inquiry - ' + interest + ' (' + name + ')') +
       '&body=' + encodeURIComponent(body);
 
