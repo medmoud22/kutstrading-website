@@ -167,14 +167,48 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  var langLinks = document.querySelectorAll('.lang-link');
-  if (langLinks.length) {
-    var currentUrl = encodeURIComponent(window.location.href);
+  var langToggle = document.getElementById('langToggle');
+  var langMenu = document.getElementById('langMenu');
+  var langCurrent = document.getElementById('langCurrent');
+  var langOptions = document.querySelectorAll('.lang-option');
 
-    langLinks.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        var code = link.getAttribute('data-lang');
+  function closeLangMenu() {
+    if (!langMenu) return;
+    langMenu.classList.remove('open');
+    if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = langMenu.classList.toggle('open');
+      langToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', function () {
+      closeLangMenu();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLangMenu();
+    });
+  }
+
+  if (langOptions.length && langCurrent) {
+    var pageUrl = encodeURIComponent(window.location.href);
+
+    langOptions.forEach(function (option) {
+      option.addEventListener('click', function () {
+        var code = option.getAttribute('data-lang');
+
+        langOptions.forEach(function (o) {
+          o.classList.remove('active');
+          o.setAttribute('aria-selected', 'false');
+        });
+        option.classList.add('active');
+        option.setAttribute('aria-selected', 'true');
+        langCurrent.textContent = code.toUpperCase();
+        closeLangMenu();
 
         if (code === 'en') {
           window.location.href = window.location.href.split('?')[0];
@@ -182,7 +216,7 @@
         }
 
         window.location.href =
-          'https://translate.google.com/translate?sl=en&tl=' + code + '&u=' + currentUrl;
+          'https://translate.google.com/translate?sl=en&tl=' + code + '&u=' + pageUrl;
       });
     });
   }

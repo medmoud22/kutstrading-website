@@ -40,15 +40,41 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
       <p class="font-medium tracking-wide">ZRA NO 0569 B4 · Nouakchott, Mauritania</p>
       <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
-        <div class="flex items-center gap-1.5" role="group" aria-label="Language selector">
-          <span class="font-bold tracking-wide text-blue-100/70 mr-1">🌐</span>
-          <a href="#" data-lang="en" class="lang-link active" aria-label="English">EN</a>
-          <span class="lang-sep" aria-hidden="true">|</span>
-          <a href="#" data-lang="ar" class="lang-link" aria-label="Arabic">AR</a>
-          <span class="lang-sep" aria-hidden="true">|</span>
-          <a href="#" data-lang="fr" class="lang-link" aria-label="French">FR</a>
-          <span class="lang-sep" aria-hidden="true">|</span>
-          <a href="#" data-lang="es" class="lang-link" aria-label="Spanish">ES</a>
+        <div class="lang-switcher">
+          <button id="langToggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/>
+            </svg>
+            <span id="langCurrent" class="lang-current">EN</span>
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul id="langMenu" class="lang-menu" role="listbox" aria-labelledby="langToggle">
+            <li role="none">
+              <button type="button" class="lang-option active" data-lang="en" role="option" aria-selected="true">
+                <span class="lang-code">EN</span><span class="lang-name">English</span>
+                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-option" data-lang="ar" role="option" aria-selected="false">
+                <span class="lang-code">AR</span><span class="lang-name">العربية</span>
+                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-option" data-lang="fr" role="option" aria-selected="false">
+                <span class="lang-code">FR</span><span class="lang-name">Français</span>
+                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-option" data-lang="es" role="option" aria-selected="false">
+                <span class="lang-code">ES</span><span class="lang-name">Español</span>
+                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </button>
+            </li>
+          </ul>
         </div>
         <div class="flex items-center gap-4">
           <a href="mailto:info@kutstrading.com" class="flex items-center gap-1.5 hover:text-brand-green transition-colors">✉ info@kutstrading.com</a>
