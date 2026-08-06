@@ -38,26 +38,26 @@
 
   <div class="bg-brand-blue-dark text-white text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-      <p class="font-medium tracking-wide">ZRA NO 0569 B4 · Nouakchott, Mauritania</p>
+      <p class="font-medium tracking-wide" data-i18n="top.address">ZRA NO 0569 B4 · Nouakchott, Mauritania</p>
       <div class="flex flex-wrap items-center justify-end gap-x-4 gap-y-1">
         <div class="flex items-center gap-4">
           <a href="mailto:info@kutstrading.com" class="flex items-center gap-1.5 hover:text-brand-green transition-colors">✉ info@kutstrading.com</a>
           <a href="tel:+22233223305" class="flex items-center gap-1.5 hover:text-brand-green transition-colors">☏ +222 33 22 33 05</a>
         </div>
-        <div class="lang-switcher notranslate" translate="no">
-          <button type="button" class="lang-toggle" aria-haspopup="true" aria-label="Select language">
+        <div class="lang-switcher">
+          <button type="button" class="lang-toggle" id="langToggle" aria-haspopup="true" aria-label="Select language">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <circle cx="12" cy="12" r="9"/>
               <path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/>
             </svg>
-            <span class="lang-current">English</span>
+            <span class="lang-current" data-i18n="lang.name">English</span>
             <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="lang-menu" role="menu" aria-label="Select language">
-            <li role="none"><a class="lang-option active" href="https://kutstrading.com/">English</a></li>
-            <li role="none"><a class="lang-option" href="https://translate.google.com/translate?sl=en&amp;tl=ar&amp;u=https://kutstrading.com/">العربية</a></li>
-            <li role="none"><a class="lang-option" href="https://translate.google.com/translate?sl=en&amp;tl=fr&amp;u=https://kutstrading.com/">Français</a></li>
-            <li role="none"><a class="lang-option" href="https://translate.google.com/translate?sl=en&amp;tl=es&amp;u=https://kutstrading.com/">Español</a></li>
+            <li role="none"><button type="button" class="lang-option active" data-lang="en">English</button></li>
+            <li role="none"><button type="button" class="lang-option" data-lang="ar">العربية</button></li>
+            <li role="none"><button type="button" class="lang-option" data-lang="fr">Français</button></li>
+            <li role="none"><button type="button" class="lang-option" data-lang="es">Español</button></li>
           </ul>
         </div>
       </div>
@@ -72,11 +72,11 @@
         </a>
 
         <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About Us</a>
-          <a href="#services" class="nav-link">Services</a>
-          <a href="#brands" class="nav-link">Our Brands</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">About Us</a>
+          <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+          <a href="#brands" class="nav-link" data-i18n="nav.brands">Our Brands</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         </nav>
 
         <div class="hidden lg:flex items-center gap-3">
@@ -99,11 +99,11 @@
 
     <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
       <nav class="px-4 py-4 flex flex-col gap-1 font-medium text-slate-700">
-        <a href="#home" class="mobile-link">Home</a>
-        <a href="#about" class="mobile-link">About Us</a>
-        <a href="#services" class="mobile-link">Services</a>
-        <a href="#brands" class="mobile-link">Our Brands</a>
-        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#home" class="mobile-link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="mobile-link" data-i18n="nav.about">About Us</a>
+        <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
+        <a href="#brands" class="mobile-link" data-i18n="nav.brands">Our Brands</a>
+        <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="px-4 pb-5 flex flex-col gap-3">
         <a href="tel:+22233223305" class="btn-call justify-center">
@@ -112,7 +112,7 @@
         </a>
         <a href="https://wa.me/22244223305" target="_blank" rel="noopener" class="btn-whatsapp justify-center">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 00-8.4 15.13L2 22l5-1.3A9.9 9.9 0 1012.04 2zm5.77 14.06a1.6 1.6 0 01-1.14.8c-.3.07-.68.1-1.1-.07a9.6 9.6 0 01-3.98-2.47 9.98 9.98 0 01-1.35-1.7 1.6 1.6 0 01.12-1.87c.14-.18.3-.4.41-.54.14-.16.18-.28.27-.47.1-.2.05-.36-.02-.5l-.74-1.8c-.2-.48-.4-.4-.55-.4h-.5c-.16 0-.42.06-.64.3a2.7 2.7 0 00-.83 2c0 .2.02.36.05.52.14.6.55 1.5 1.2 2.4a10.6 10.6 0 004.1 3.6c.58.26 1.02.42 1.37.54.57.18 1.1.15 1.5.1.47-.07 1.44-.6 1.64-1.17.2-.57.2-1.06.14-1.16-.05-.1-.2-.17-.42-.3z"/></svg>
-          Chat on WhatsApp
+          <span data-i18n="nav.chatWhatsapp">Chat on WhatsApp</span>
         </a>
       </div>
     </div>
@@ -128,17 +128,17 @@
         <div class="max-w-3xl reveal">
           <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium tracking-wide">
             <span class="w-2 h-2 rounded-full bg-brand-green inline-block"></span>
-            KAYA Universal Trading &amp; Services · Nouakchott, Mauritania
+            <span data-i18n="hero.badge">KAYA Universal Trading &amp; Services · Nouakchott, Mauritania</span>
           </p>
           <h1 class="mt-6 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight">
-            Global Trading &amp; <span class="text-brand-green">International Business</span> Partnerships
+            <span data-i18n="hero.title1">Global Trading &amp;</span> <span class="text-brand-green" data-i18n="hero.title2">International Business</span> <span data-i18n="hero.title3">Partnerships</span>
           </h1>
-          <p class="mt-6 text-lg sm:text-xl text-blue-100/90 leading-relaxed max-w-2xl">
+          <p class="mt-6 text-lg sm:text-xl text-blue-100/90 leading-relaxed max-w-2xl" data-i18n="hero.subtitle">
             KUTS connects markets, brands and enterprises across continents — delivering import/export operations, brand representation and joint ventures built on trust and results.
           </p>
           <div class="mt-9 flex flex-wrap gap-4">
-            <a href="#services" class="btn-primary">Explore Our Services</a>
-            <a href="#contact" class="btn-outline">Contact Us</a>
+            <a href="#services" class="btn-primary" data-i18n="hero.cta1">Explore Our Services</a>
+            <a href="#contact" class="btn-outline" data-i18n="hero.cta2">Contact Us</a>
           </div>
           <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-blue-100/80">
             <a href="tel:+22233223305" class="flex items-center gap-2 hover:text-brand-green transition-colors">
@@ -161,19 +161,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="text-center">
             <p class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green">4</p>
-            <p class="mt-1 text-sm text-blue-100/80">Core Business Lines</p>
+            <p class="mt-1 text-sm text-blue-100/80" data-i18n="stats.core">Core Business Lines</p>
           </div>
           <div class="text-center">
-            <p class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green">Import</p>
-            <p class="mt-1 text-sm text-blue-100/80">&amp; Export Operations</p>
+            <p class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green" data-i18n="stats.import">Import</p>
+            <p class="mt-1 text-sm text-blue-100/80" data-i18n="stats.export">&amp; Export Operations</p>
           </div>
           <div class="text-center">
             <p class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green">100%</p>
-            <p class="mt-1 text-sm text-blue-100/80">Partnership Commitment</p>
+            <p class="mt-1 text-sm text-blue-100/80" data-i18n="stats.commitment">Partnership Commitment</p>
           </div>
           <div class="text-center">
             <p class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green">MRT</p>
-            <p class="mt-1 text-sm text-blue-100/80">Nouakchott · Mauritania</p>
+            <p class="mt-1 text-sm text-blue-100/80" data-i18n="stats.loc">Nouakchott · Mauritania</p>
           </div>
         </div>
       </div>
@@ -183,29 +183,29 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div class="reveal">
-            <p class="eyebrow">About Us</p>
-            <h2 class="section-title">A Leading Trading Company Driving <span class="text-brand-green">International Partnerships</span></h2>
-            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+            <p class="eyebrow" data-i18n="about.eyebrow">About Us</p>
+            <h2 class="section-title"><span data-i18n="about.title1">A Leading Trading Company Driving</span> <span class="text-brand-green" data-i18n="about.title2">International Partnerships</span></h2>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed" data-i18n="about.p1">
               Headquartered in Nouakchott, <strong class="text-slate-800">KUTS — KAYA Universal Trading and Services</strong> is a dynamic trading company dedicated to connecting local and regional markets with the world. We build bridges between suppliers, brands and investors through reliable international trade, brand representation and joint ventures.
             </p>
-            <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            <p class="mt-4 text-lg text-slate-600 leading-relaxed" data-i18n="about.p2">
               Our mission is to be the partner of choice for companies seeking to expand into Mauritania and West Africa — combining deep local knowledge with a truly global outlook.
             </p>
             <ul class="mt-8 space-y-3">
               <li class="flex items-start gap-3">
                 <span class="check-badge">✓</span>
-                <span class="text-slate-700"><strong class="text-slate-800">Reliable Import/Export Operations</strong> across international corridors</span>
+                <span class="text-slate-700"><strong class="text-slate-800" data-i18n="about.check1a">Reliable Import/Export Operations</strong> <span data-i18n="about.check1b">across international corridors</span></span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="check-badge">✓</span>
-                <span class="text-slate-700"><strong class="text-slate-800">Trusted Brand Representation</strong> for global companies locally &amp; regionally</span>
+                <span class="text-slate-700"><strong class="text-slate-800" data-i18n="about.check2a">Trusted Brand Representation</strong> <span data-i18n="about.check2b">for global companies locally &amp; regionally</span></span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="check-badge">✓</span>
-                <span class="text-slate-700"><strong class="text-slate-800">Strategic Joint Ventures</strong> with international enterprises</span>
+                <span class="text-slate-700"><strong class="text-slate-800" data-i18n="about.check3a">Strategic Joint Ventures</strong> <span data-i18n="about.check3b">with international enterprises</span></span>
               </li>
             </ul>
-            <a href="#services" class="mt-9 btn-primary inline-flex">Discover Our Services</a>
+            <a href="#services" class="mt-9 btn-primary inline-flex" data-i18n="about.cta">Discover Our Services</a>
           </div>
 
           <div class="reveal">
@@ -218,15 +218,15 @@
                   <div class="mt-8 grid grid-cols-2 gap-6 text-center">
                     <div class="rounded-2xl bg-slate-50 p-5">
                       <p class="font-display font-bold text-2xl text-brand-blue">MR</p>
-                      <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Mauritania · Africa</p>
+                      <p class="mt-1 text-xs uppercase tracking-wider text-slate-500" data-i18n="about.card1">Mauritania · Africa</p>
                     </div>
                     <div class="rounded-2xl bg-slate-50 p-5">
                       <p class="font-display font-bold text-2xl text-brand-blue">WW</p>
-                      <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Worldwide Reach</p>
+                      <p class="mt-1 text-xs uppercase tracking-wider text-slate-500" data-i18n="about.card2">Worldwide Reach</p>
                     </div>
                     <div class="rounded-2xl bg-slate-50 p-5 col-span-2">
                       <p class="font-display font-bold text-2xl text-brand-green">kutstrading.com</p>
-                      <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Official Website</p>
+                      <p class="mt-1 text-xs uppercase tracking-wider text-slate-500" data-i18n="about.card3">Official Website</p>
                     </div>
                   </div>
                 </div>
@@ -240,9 +240,9 @@
     <section id="services" class="py-20 lg:py-28 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-2xl mx-auto reveal">
-          <p class="eyebrow">Our Business &amp; Services</p>
-          <h2 class="section-title">What We <span class="text-brand-green">Do</span></h2>
-          <p class="mt-5 text-lg text-slate-600">
+          <p class="eyebrow" data-i18n="services.eyebrow">Our Business &amp; Services</p>
+          <h2 class="section-title"><span data-i18n="services.title1">What We</span> <span class="text-brand-green" data-i18n="services.title2">Do</span></h2>
+          <p class="mt-5 text-lg text-slate-600" data-i18n="services.subtitle">
             Four core capabilities, one goal: growing your business across borders.
           </p>
         </div>
@@ -250,58 +250,58 @@
         <div class="mt-14 grid md:grid-cols-3 gap-8">
           <div class="service-card reveal">
             <div class="service-icon">🌐</div>
-            <h3 class="mt-6 text-xl font-display font-bold text-slate-800">International Trading &amp; Commerce</h3>
-            <p class="mt-3 text-slate-600 leading-relaxed">
+            <h3 class="mt-6 text-xl font-display font-bold text-slate-800" data-i18n="services.s1.title">International Trading &amp; Commerce</h3>
+            <p class="mt-3 text-slate-600 leading-relaxed" data-i18n="services.s1.desc">
               End-to-end import/export operations connecting Mauritanian and West African markets with global suppliers and buyers.
             </p>
             <ul class="mt-5 space-y-2 text-sm text-slate-600">
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Import &amp; Export management</li>
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Sourcing &amp; logistics coordination</li>
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Trade &amp; market intelligence</li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s1.l1">Import &amp; Export management</span></li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s1.l2">Sourcing &amp; logistics coordination</span></li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s1.l3">Trade &amp; market intelligence</span></li>
             </ul>
-            <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-blue hover:text-brand-green transition-colors">Enquire now <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-blue hover:text-brand-green transition-colors"><span data-i18n="services.s1.link">Enquire now</span> <span aria-hidden="true">→</span></a>
           </div>
 
           <div class="service-card reveal">
             <div class="service-icon">🤝</div>
-            <h3 class="mt-6 text-xl font-display font-bold text-slate-800">Brand Representation</h3>
-            <p class="mt-3 text-slate-600 leading-relaxed">
+            <h3 class="mt-6 text-xl font-display font-bold text-slate-800" data-i18n="services.s2.title">Brand Representation</h3>
+            <p class="mt-3 text-slate-600 leading-relaxed" data-i18n="services.s2.desc">
               Representing global brands and international companies locally and regionally with dedicated, on-the-ground market presence.
             </p>
             <ul class="mt-5 space-y-2 text-sm text-slate-600">
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Exclusive representation</li>
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Distribution networks</li>
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Regional market development</li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s2.l1">Exclusive representation</span></li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s2.l2">Distribution networks</span></li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s2.l3">Regional market development</span></li>
             </ul>
-            <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-blue hover:text-brand-green transition-colors">Partner with us <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-blue hover:text-brand-green transition-colors"><span data-i18n="services.s2.link">Partner with us</span> <span aria-hidden="true">→</span></a>
           </div>
 
           <div class="service-card reveal">
             <div class="service-icon">🚀</div>
-            <h3 class="mt-6 text-xl font-display font-bold text-slate-800">International Joint Ventures</h3>
-            <p class="mt-3 text-slate-600 leading-relaxed">
+            <h3 class="mt-6 text-xl font-display font-bold text-slate-800" data-i18n="services.s3.title">International Joint Ventures</h3>
+            <p class="mt-3 text-slate-600 leading-relaxed" data-i18n="services.s3.desc">
               Strategic business partnerships with global enterprises — combining international expertise with local market access.
             </p>
             <ul class="mt-5 space-y-2 text-sm text-slate-600">
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Joint venture structuring</li>
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Investment facilitation</li>
-              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> Cross-border projects</li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s3.l1">Joint venture structuring</span></li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s3.l2">Investment facilitation</span></li>
+              <li class="flex items-center gap-2"><span class="text-brand-green font-bold">▸</span> <span data-i18n="services.s3.l3">Cross-border projects</span></li>
             </ul>
-            <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-blue hover:text-brand-green transition-colors">Start a project <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-blue hover:text-brand-green transition-colors"><span data-i18n="services.s3.link">Start a project</span> <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <div class="mt-8 reveal">
           <div class="rounded-2xl bg-slate-50 border border-slate-200 p-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h3 class="text-xl font-display font-bold text-slate-800">General Business &amp; Commercial Services</h3>
-              <p class="mt-2 text-slate-600 max-w-2xl">
+              <h3 class="text-xl font-display font-bold text-slate-800" data-i18n="services.g.title">General Business &amp; Commercial Services</h3>
+              <p class="mt-2 text-slate-600 max-w-2xl" data-i18n="services.g.desc">
                 Advisory, commercial facilitation and business development support to help companies enter and succeed in Mauritania and the wider region.
               </p>
             </div>
             <a href="https://wa.me/22244223305" target="_blank" rel="noopener" class="btn-whatsapp shrink-0">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 00-8.4 15.13L2 22l5-1.3A9.9 9.9 0 1012.04 2zm5.77 14.06a1.6 1.6 0 01-1.14.8c-.3.07-.68.1-1.1-.07a9.6 9.6 0 01-3.98-2.47 9.98 9.98 0 01-1.35-1.7 1.6 1.6 0 01.12-1.87c.14-.18.3-.4.41-.54.14-.16.18-.28.27-.47.1-.2.05-.36-.02-.5l-.74-1.8c-.2-.48-.4-.4-.55-.4h-.5c-.16 0-.42.06-.64.3a2.7 2.7 0 00-.83 2c0 .2.02.36.05.52.14.6.55 1.5 1.2 2.4a10.6 10.6 0 004.1 3.6c.58.26 1.02.42 1.37.54.57.18 1.1.15 1.5.1.47-.07 1.44-.6 1.64-1.17.2-.57.2-1.06.14-1.16-.05-.1-.2-.17-.42-.3z"/></svg>
-              Discuss on WhatsApp
+              <span data-i18n="services.g.cta">Discuss on WhatsApp</span>
             </a>
           </div>
         </div>
@@ -315,13 +315,13 @@
           <div class="reveal">
             <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium tracking-wide">
               <span class="w-2 h-2 rounded-full bg-brand-cream inline-block"></span>
-              Featured Brand
+              <span data-i18n="brands.badge">Featured Brand</span>
             </p>
-            <h2 class="mt-6 font-display font-extrabold text-4xl sm:text-5xl leading-tight">The <span class="text-brand-cream">KAYA</span> Brand</h2>
-            <p class="mt-6 text-lg text-red-100/90 leading-relaxed max-w-xl">
+            <h2 class="mt-6 font-display font-extrabold text-4xl sm:text-5xl leading-tight"><span data-i18n="brands.title1">The</span> <span class="text-brand-cream" data-i18n="brands.title2">KAYA</span> <span data-i18n="brands.title3">Brand</span></h2>
+            <p class="mt-6 text-lg text-red-100/90 leading-relaxed max-w-xl" data-i18n="brands.desc">
               A signature KUTS brand with a bold identity — built on quality, heritage and a distinctive geometric style. KAYA represents the strength and universal vision behind everything we do.
             </p>
-            <a href="#contact" class="mt-8 btn-cream">Partner With KAYA</a>
+            <a href="#contact" class="mt-8 btn-cream" data-i18n="brands.cta">Partner With KAYA</a>
           </div>
 
           <div class="reveal flex justify-center lg:justify-end">
@@ -337,9 +337,9 @@
     <section id="leadership" class="py-20 lg:py-28 bg-slate-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-2xl mx-auto reveal">
-          <p class="eyebrow">Leadership</p>
-          <h2 class="section-title">Guided by <span class="text-brand-green">Vision</span></h2>
-          <p class="mt-5 text-lg text-slate-600">The people leading KUTS on its international growth journey.</p>
+          <p class="eyebrow" data-i18n="leadership.eyebrow">Leadership</p>
+          <h2 class="section-title"><span data-i18n="leadership.title1">Guided by</span> <span class="text-brand-green" data-i18n="leadership.title2">Vision</span></h2>
+          <p class="mt-5 text-lg text-slate-600" data-i18n="leadership.subtitle">The people leading KUTS on its international growth journey.</p>
         </div>
 
         <div class="mt-14 max-w-3xl mx-auto reveal">
@@ -359,18 +359,18 @@
               </div>
               <div class="text-center sm:text-left">
                 <h3 class="font-display font-bold text-2xl text-slate-800">Mohamed Sidiya Taleb</h3>
-                <p class="mt-1 text-brand-green font-semibold">Directeur Général / CEO</p>
-                <p class="mt-3 text-slate-600 leading-relaxed">
+                <p class="mt-1 text-brand-green font-semibold" data-i18n="leadership.role">Directeur Général / CEO</p>
+                <p class="mt-3 text-slate-600 leading-relaxed" data-i18n="leadership.bio">
                   Leading KUTS with a commitment to trusted international partnerships, driving the company's trading, representation and joint venture activities across Africa and beyond.
                 </p>
                 <div class="mt-4 flex flex-wrap gap-3 justify-center sm:justify-start">
                   <a href="mailto:info@kutstrading.com" class="text-sm font-semibold text-brand-blue hover:text-brand-green transition-colors flex items-center gap-1.5">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    Email
+                    <span data-i18n="leadership.email">Email</span>
                   </a>
                   <a href="https://wa.me/22244223305" target="_blank" rel="noopener" class="text-sm font-semibold text-brand-blue hover:text-brand-green transition-colors flex items-center gap-1.5">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 00-8.4 15.13L2 22l5-1.3A9.9 9.9 0 1012.04 2zm5.77 14.06a1.6 1.6 0 01-1.14.8c-.3.07-.68.1-1.1-.07a9.6 9.6 0 01-3.98-2.47 9.98 9.98 0 01-1.35-1.7 1.6 1.6 0 01.12-1.87c.14-.18.3-.4.41-.54.14-.16.18-.28.27-.47.1-.2.05-.36-.02-.5l-.74-1.8c-.2-.48-.4-.4-.55-.4h-.5c-.16 0-.42.06-.64.3a2.7 2.7 0 00-.83 2c0 .2.02.36.05.52.14.6.55 1.5 1.2 2.4a10.6 10.6 0 004.1 3.6c.58.26 1.02.42 1.37.54.57.18 1.1.15 1.5.1.47-.07 1.44-.6 1.64-1.17.2-.57.2-1.06.14-1.16-.05-.1-.2-.17-.42-.3z"/></svg>
-                    WhatsApp
+                    <span data-i18n="leadership.whatsapp">WhatsApp</span>
                   </a>
                 </div>
               </div>
@@ -383,9 +383,9 @@
     <section id="contact" class="py-20 lg:py-28 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-2xl mx-auto reveal">
-          <p class="eyebrow">Contact Us</p>
-          <h2 class="section-title">Let's Build a <span class="text-brand-green">Partnership</span></h2>
-          <p class="mt-5 text-lg text-slate-600">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact Us</p>
+          <h2 class="section-title"><span data-i18n="contact.title1">Let's Build a</span> <span class="text-brand-green" data-i18n="contact.title2">Partnership</span></h2>
+          <p class="mt-5 text-lg text-slate-600" data-i18n="contact.subtitle">
             Reach out by phone, WhatsApp, email or the form below — we respond promptly.
           </p>
         </div>
@@ -395,29 +395,29 @@
             <div class="contact-card">
               <div class="contact-icon">📍</div>
               <div>
-                <h3 class="font-semibold text-slate-800">Address</h3>
+                <h3 class="font-semibold text-slate-800" data-i18n="contact.address">Address</h3>
                 <p class="mt-1 text-slate-600">ZRA NO 0569 B4<br>Nouakchott, Mauritania</p>
               </div>
             </div>
             <div class="contact-card">
               <div class="contact-icon">✉</div>
               <div>
-                <h3 class="font-semibold text-slate-800">Email</h3>
+                <h3 class="font-semibold text-slate-800" data-i18n="contact.email">Email</h3>
                 <a href="mailto:info@kutstrading.com" class="mt-1 block text-brand-blue font-medium hover:text-brand-green transition-colors break-all">info@kutstrading.com</a>
               </div>
             </div>
             <div class="contact-card">
               <div class="contact-icon">☏</div>
               <div>
-                <h3 class="font-semibold text-slate-800">Phone</h3>
+                <h3 class="font-semibold text-slate-800" data-i18n="contact.phone">Phone</h3>
                 <a href="tel:+22233223305" class="mt-1 block text-brand-blue font-medium hover:text-brand-green transition-colors">+222 33 22 33 05</a>
-                <p class="text-sm text-slate-500 mt-0.5">Tél / Main Line</p>
+                <p class="text-sm text-slate-500 mt-0.5" data-i18n="contact.phoneSub">Tél / Main Line</p>
               </div>
             </div>
             <div class="contact-card">
               <div class="contact-icon bg-brand-green text-white">💬</div>
               <div>
-                <h3 class="font-semibold text-slate-800">WhatsApp</h3>
+                <h3 class="font-semibold text-slate-800" data-i18n="contact.whatsapp">WhatsApp</h3>
                 <a href="https://wa.me/22244223305" target="_blank" rel="noopener" class="mt-1 block text-brand-blue font-medium hover:text-brand-green transition-colors">+222 44 22 33 05</a>
                 <a href="https://wa.me/34695060411" target="_blank" rel="noopener" class="block text-slate-600 hover:text-brand-green transition-colors">+34 695 06 04 11</a>
               </div>
@@ -425,11 +425,11 @@
             <div class="rounded-2xl bg-brand-green/10 border border-brand-green/30 p-5 flex flex-col sm:flex-row gap-3">
               <a href="https://wa.me/22244223305?text=Hello%20KUTS%2C%20I%20would%20like%20to%20discuss%20a%20business%20partnership." target="_blank" rel="noopener" class="btn-whatsapp flex-1 justify-center">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 00-8.4 15.13L2 22l5-1.3A9.9 9.9 0 1012.04 2zm5.77 14.06a1.6 1.6 0 01-1.14.8c-.3.07-.68.1-1.1-.07a9.6 9.6 0 01-3.98-2.47 9.98 9.98 0 01-1.35-1.7 1.6 1.6 0 01.12-1.87c.14-.18.3-.4.41-.54.14-.16.18-.28.27-.47.1-.2.05-.36-.02-.5l-.74-1.8c-.2-.48-.4-.4-.55-.4h-.5c-.16 0-.42.06-.64.3a2.7 2.7 0 00-.83 2c0 .2.02.36.05.52.14.6.55 1.5 1.2 2.4a10.6 10.6 0 004.1 3.6c.58.26 1.02.42 1.37.54.57.18 1.1.15 1.5.1.47-.07 1.44-.6 1.64-1.17.2-.57.2-1.06.14-1.16-.05-.1-.2-.17-.42-.3z"/></svg>
-                Chat Now
+                <span data-i18n="contact.chatNow">Chat Now</span>
               </a>
               <a href="tel:+22233223305" class="btn-call flex-1 justify-center">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-                Call Us
+                <span data-i18n="contact.callUs">Call Us</span>
               </a>
             </div>
           </div>
@@ -438,39 +438,39 @@
             <form id="contactForm" class="bg-slate-50 rounded-3xl border border-slate-200 p-8 sm:p-10 space-y-5" novalidate>
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label for="name" class="form-label">Full Name *</label>
-                  <input type="text" id="name" name="name" placeholder="Your name" class="form-input" required>
-                  <p class="field-error" data-error-for="name">Please enter your name.</p>
+                  <label for="name" class="form-label" data-i18n="form.name">Full Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" class="form-input" data-i18n-placeholder="form.namePh" required>
+                  <p class="field-error" data-error-for="name" data-i18n="form.nameErr">Please enter your name.</p>
                 </div>
                 <div>
-                  <label for="email" class="form-label">Email Address *</label>
-                  <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" required>
-                  <p class="field-error" data-error-for="email">Please enter a valid email.</p>
+                  <label for="email" class="form-label" data-i18n="form.email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" data-i18n-placeholder="form.emailPh" required>
+                  <p class="field-error" data-error-for="email" data-i18n="form.emailErr">Please enter a valid email.</p>
                 </div>
               </div>
               <div>
-                <label for="phone" class="form-label">Phone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" placeholder="+222 ..." class="form-input">
+                <label for="phone" class="form-label" data-i18n="form.phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="+222 ..." class="form-input" data-i18n-placeholder="form.phonePh">
               </div>
               <div>
-                <label for="interest" class="form-label">Topic of Interest</label>
+                <label for="interest" class="form-label" data-i18n="form.interest">Topic of Interest</label>
                 <select id="interest" name="interest" class="form-input">
-                  <option value="Trading & Import/Export">Trading &amp; Import/Export</option>
-                  <option value="Brand Representation">Brand Representation</option>
-                  <option value="Joint Venture">International Joint Venture</option>
-                  <option value="KAYA Brand">KAYA Brand</option>
-                  <option value="General Business">General Business &amp; Commercial Services</option>
-                  <option value="Other">Other</option>
+                  <option value="Trading & Import/Export" data-i18n="opt.trading">Trading &amp; Import/Export</option>
+                  <option value="Brand Representation" data-i18n="opt.brand">Brand Representation</option>
+                  <option value="Joint Venture" data-i18n="opt.jv">International Joint Venture</option>
+                  <option value="KAYA Brand" data-i18n="opt.kaya">KAYA Brand</option>
+                  <option value="General Business" data-i18n="opt.general">General Business &amp; Commercial Services</option>
+                  <option value="Other" data-i18n="opt.other">Other</option>
                 </select>
               </div>
               <div>
-                <label for="message" class="form-label">Message *</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or inquiry..." class="form-input resize-none" required></textarea>
-                <p class="field-error" data-error-for="message">Please enter a message.</p>
+                <label for="message" class="form-label" data-i18n="form.message">Message *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or inquiry..." class="form-input resize-none" data-i18n-placeholder="form.messagePh" required></textarea>
+                <p class="field-error" data-error-for="message" data-i18n="form.messageErr">Please enter a message.</p>
               </div>
               <div class="flex flex-col sm:flex-row items-center gap-4 pt-1">
-                <button type="submit" class="btn-primary w-full sm:w-auto justify-center">Send Message</button>
-                <p class="text-xs text-slate-500">Prefer chat? Your message can be sent directly via WhatsApp.</p>
+                <button type="submit" class="btn-primary w-full sm:w-auto justify-center" data-i18n="form.submit">Send Message</button>
+                <p class="text-xs text-slate-500" data-i18n="form.hint">Prefer chat? Your message can be sent directly via WhatsApp.</p>
               </div>
             </form>
           </div>
@@ -484,7 +484,7 @@
       <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div class="lg:col-span-1">
           <img src="images/kuts-logo.jpg" alt="KUTS - KAYA Universal Trading and Services" class="h-14 w-auto">
-          <p class="mt-5 text-sm leading-relaxed text-blue-200/80 max-w-xs">
+          <p class="mt-5 text-sm leading-relaxed text-blue-200/80 max-w-xs" data-i18n="footer.desc">
             KAYA Universal Trading and Services — global trading, brand representation and international business partnerships from Nouakchott, Mauritania.
           </p>
           <div class="mt-5 flex gap-3">
@@ -501,28 +501,28 @@
         </div>
 
         <div>
-          <h3 class="font-display font-semibold text-white">Quick Links</h3>
+          <h3 class="font-display font-semibold text-white" data-i18n="footer.quick">Quick Links</h3>
           <ul class="mt-5 space-y-3 text-sm">
-            <li><a href="#home" class="footer-link">Home</a></li>
-            <li><a href="#about" class="footer-link">About Us</a></li>
-            <li><a href="#services" class="footer-link">Services</a></li>
-            <li><a href="#brands" class="footer-link">Our Brands</a></li>
-            <li><a href="#contact" class="footer-link">Contact</a></li>
+            <li><a href="#home" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" class="footer-link" data-i18n="nav.about">About Us</a></li>
+            <li><a href="#services" class="footer-link" data-i18n="nav.services">Services</a></li>
+            <li><a href="#brands" class="footer-link" data-i18n="nav.brands">Our Brands</a></li>
+            <li><a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-display font-semibold text-white">Our Services</h3>
+          <h3 class="font-display font-semibold text-white" data-i18n="footer.services">Our Services</h3>
           <ul class="mt-5 space-y-3 text-sm">
-            <li>International Trading &amp; Import/Export</li>
-            <li>Brand Representation</li>
-            <li>International Joint Ventures</li>
-            <li>General Business &amp; Commercial Services</li>
+            <li data-i18n="footer.svc1">International Trading &amp; Import/Export</li>
+            <li data-i18n="services.s2.title">Brand Representation</li>
+            <li data-i18n="services.s3.title">International Joint Ventures</li>
+            <li data-i18n="services.g.title">General Business &amp; Commercial Services</li>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-display font-semibold text-white">Get in Touch</h3>
+          <h3 class="font-display font-semibold text-white" data-i18n="footer.contact">Get in Touch</h3>
           <ul class="mt-5 space-y-3 text-sm">
             <li class="flex items-start gap-2.5">
               <span class="mt-0.5">📍</span>
@@ -550,7 +550,7 @@
 
     <div class="border-t border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-200/70">
-        <p>© <span id="year">2026</span> KUTS — KAYA Universal Trading and Services. All rights reserved.</p>
+        <p>© <span id="year">2026</span> <span data-i18n="footer.copyright">KUTS — KAYA Universal Trading and Services. All rights reserved.</span></p>
         <p>kutstrading.com</p>
       </div>
     </div>
@@ -562,6 +562,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

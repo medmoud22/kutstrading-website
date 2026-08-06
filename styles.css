@@ -370,11 +370,17 @@
   width: 100%;
   padding: 9px 12px;
   border-radius: 7px;
+  border: 0;
+  background: transparent;
   color: #334155;
+  font-family: inherit;
   font-size: 0.85rem;
   font-weight: 500;
   text-decoration: none;
+  text-align: left;
+  cursor: pointer;
   white-space: nowrap;
+  appearance: none;
   transition: background 0.15s ease, color 0.15s ease;
 }
 .lang-option:hover {
@@ -386,3 +392,22 @@
   color: #7bb828;
   font-weight: 700;
 }
+
+[dir="rtl"] body,
+[dir="rtl"] .section-title,
+[dir="rtl"] .font-display {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+[dir="rtl"] .eyebrow { letter-spacing: 0; }
+[dir="rtl"] .section-title { letter-spacing: 0; }
+[dir="rtl"] .nav-link::after { left: auto; right: 0; }
+[dir="rtl"] .lang-option { text-align: right; }
+
+@media (min-width: 640px) {
+  [dir="rtl"] .sm\:text-left { text-align: right; }
+}
+
+[dir="rtl"] .contact-card:hover { transform: translateX(-4px); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+[dir="rtl"] .wa-float { right: auto; left: 1.25rem; }

@@ -9,6 +9,61 @@
   var toast = document.getElementById('toast');
   var toastTimer = null;
 
+  var STORAGE_KEY = 'kuts_lang';
+  var DEFAULT_LANG = 'en';
+  var dict = window.KUTS_I18N || {};
+  var currentLang = getLang();
+
+  function getLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && dict[saved]) return saved;
+    var nav = (navigator.language || DEFAULT_LANG).slice(0, 2).toLowerCase();
+    return dict[nav] ? nav : DEFAULT_LANG;
+  }
+
+  function t(key, lang) {
+    var table = dict[lang] || {};
+    if (table[key] !== undefined) return table[key];
+    var fallback = dict[DEFAULT_LANG] || {};
+    return fallback[key] !== undefined ? fallback[key] : key;
+  }
+
+  function tt(key) {
+    return t(key, currentLang);
+  }
+
+  function applyTranslations(lang) {
+    if (!dict[lang]) return;
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (key) el.textContent = tt(key);
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (key) el.setAttribute('placeholder', tt(key));
+    });
+    document.querySelectorAll('.lang-option').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-option').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang');
+      if (!lang || !dict[lang]) return;
+      applyTranslations(lang);
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      var toggle = document.getElementById('langToggle');
+      if (toggle) toggle.blur();
+    });
+  });
+
+  applyTranslations(currentLang);
+
   function headerScroll() {
     if (window.scrollY > 10) {
       header.classList.add('shadow-lg');
@@ -136,7 +191,7 @@
       validateMessage(messageInput);
 
     if (!valid) {
-      showToast('Please complete the required fields correctly.', 'error');
+      showToast(tt('form.invalid'), 'error');
       return;
     }
 
@@ -160,7 +215,7 @@
       '&body=' + encodeURIComponent(body);
 
     form.reset();
-    showToast('Thank you! Your email client will open to send your message.', 'success');
+    showToast(tt('form.sent'), 'success');
     window.location.href = mailLink;
   });
 
