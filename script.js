@@ -200,6 +200,8 @@
     langOptions.forEach(function (option) {
       option.addEventListener('click', function () {
         var code = option.getAttribute('data-lang');
+        var nameEl = option.querySelector('.lang-name');
+        var name = nameEl ? nameEl.textContent : code.toUpperCase();
 
         langOptions.forEach(function (o) {
           o.classList.remove('active');
@@ -207,7 +209,7 @@
         });
         option.classList.add('active');
         option.setAttribute('aria-selected', 'true');
-        langCurrent.textContent = code.toUpperCase();
+        langCurrent.textContent = name;
         closeLangMenu();
 
         if (code === 'en') {
