@@ -166,4 +166,24 @@
 
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var langLinks = document.querySelectorAll('.lang-link');
+  if (langLinks.length) {
+    var currentUrl = encodeURIComponent(window.location.href);
+
+    langLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var code = link.getAttribute('data-lang');
+
+        if (code === 'en') {
+          window.location.href = window.location.href.split('?')[0];
+          return;
+        }
+
+        window.location.href =
+          'https://translate.google.com/translate?sl=en&tl=' + code + '&u=' + currentUrl;
+      });
+    });
+  }
 })();
