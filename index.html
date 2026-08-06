@@ -53,6 +53,8 @@
           <img src="images/kuts-logo.jpg" alt="KUTS - KAYA Universal Trading and Services" class="h-12 w-auto">
         </a>
 
+        <div id="google_translate_element" class="translate-widget"></div>
+
         <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
           <a href="#home" class="nav-link">Home</a>
           <a href="#about" class="nav-link">About Us</a>
@@ -543,6 +545,17 @@
   </a>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ar,fr,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <script src="script.js"></script>
 </body>

@@ -309,3 +309,36 @@
   .wa-float { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+.translate-widget {
+  display: inline-block;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.goog-te-combo {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
