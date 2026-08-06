@@ -45,39 +45,19 @@
           <a href="tel:+22233223305" class="flex items-center gap-1.5 hover:text-brand-green transition-colors">☏ +222 33 22 33 05</a>
         </div>
         <div class="lang-switcher notranslate" translate="no">
-          <button id="langToggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+          <button type="button" class="lang-toggle" aria-haspopup="true" aria-label="Select language">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <circle cx="12" cy="12" r="9"/>
               <path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/>
             </svg>
-            <span id="langCurrent" class="lang-current">English</span>
+            <span class="lang-current">English</span>
             <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
-          <ul id="langMenu" class="lang-menu" role="listbox" aria-labelledby="langToggle">
-            <li role="none">
-              <button type="button" class="lang-option active" data-lang="en" role="option" aria-selected="true">
-                <span class="lang-code">EN</span><span class="lang-name">English</span>
-                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </button>
-            </li>
-            <li role="none">
-              <button type="button" class="lang-option" data-lang="ar" role="option" aria-selected="false">
-                <span class="lang-code">AR</span><span class="lang-name">العربية</span>
-                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </button>
-            </li>
-            <li role="none">
-              <button type="button" class="lang-option" data-lang="fr" role="option" aria-selected="false">
-                <span class="lang-code">FR</span><span class="lang-name">Français</span>
-                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </button>
-            </li>
-            <li role="none">
-              <button type="button" class="lang-option" data-lang="es" role="option" aria-selected="false">
-                <span class="lang-code">ES</span><span class="lang-name">Español</span>
-                <svg class="lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </button>
-            </li>
+          <ul class="lang-menu" role="menu" aria-label="Select language">
+            <li role="none"><a class="lang-option active" href="https://kutstrading.com/">English</a></li>
+            <li role="none"><a class="lang-option" href="https://translate.google.com/translate?sl=en&amp;tl=ar&amp;u=https://kutstrading.com/">العربية</a></li>
+            <li role="none"><a class="lang-option" href="https://translate.google.com/translate?sl=en&amp;tl=fr&amp;u=https://kutstrading.com/">Français</a></li>
+            <li role="none"><a class="lang-option" href="https://translate.google.com/translate?sl=en&amp;tl=es&amp;u=https://kutstrading.com/">Español</a></li>
           </ul>
         </div>
       </div>
